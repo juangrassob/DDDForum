@@ -1,42 +1,106 @@
+html {
+  color-scheme: none !important;
+  color: unset !important;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  width: 100vw;
+  margin: 1rem;
   padding: 2rem;
-  text-align: center;
+  background: #f1f1f1;
+  height: 100vh;
+  border-radius: 0.2rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.flex {
+  display: flex;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.align-center {
+  align-items: center;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.content-container {
+  display: flex;
+  margin: 2rem;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  /* border: 5px solid red; */
 }
 
-.card {
-  padding: 2em;
+#layout {
+  /* border: 5px solid blue; */
 }
 
-.read-the-docs {
-  color: #888;
+/* ----- HEADER -----*/
+#header {
+  /* border: 5px solid magenta; */
+}
+#app-logo img {
+  max-width: 4rem;
+}
+
+#title-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+#title-container h1,
+h3 {
+  margin: 0;
+}
+
+/* ----- POST ITEM -----*/
+.post-item {
+  display: flex;
+  gap: 1rem;
+}
+
+.post-item-details {
+  display: flex;
+  gap: 1rem;
+}
+
+.post-item-details > *:not(:last-child) {
+  border-right: 1px solid black;
+  padding-right: 1rem;
+}
+
+.post-item-votes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post-item-downvote > img {
+  transform: rotate(180deg);
+}
+
+/* ----- REGISTRATION FORM -----*/
+.registration-form form {
+  display: flex;
+  flex-direction: column;
+  min-width: 500px;
+}
+
+.registration-form input {
+  font-size: 1rem;
+  margin: 0.2rem;
+  padding: 0.6rem 1rem;
+  border: 3px solid black;
+  border-radius: 3px;
+}
+
+.registration-form button {
+  margin: 1rem;
 }
